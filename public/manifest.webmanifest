@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "NoxaPlus Glyph — آزمایشگاه تایپوگرافی فارسی",
+  "short_name": "NoxaPlus Glyph",
+  "description": "مقایسهٔ فونت‌ها، تنظیم تایپوگرافی و خروجی CSS؛ کاملاً محلی.",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf9f5",
+  "theme_color": "#334dea",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "./icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
