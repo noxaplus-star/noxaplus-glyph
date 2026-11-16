@@ -2,6 +2,15 @@
 
 Notable changes to NoxaPlus Glyph are recorded here. Application release numbers are separate from the JSON project schema version.
 
+## 1.0.1 - 2026-11-16
+
+Brand update.
+
+- The original NoxaPlus logo now appears in the header, with a light variant for
+  the dark theme, replacing the standalone letter tile.
+- The README uses the official NoxaPlus brand banner.
+- Version labels in the interface, footer, and documentation read 1.0.1.
+
 ## 1.0.0 - 2026-11-12
 
 Initial public release of the local-first Persian typography lab by NoxaPlus.

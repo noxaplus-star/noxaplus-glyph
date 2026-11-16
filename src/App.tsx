@@ -10,6 +10,8 @@ import { useProject } from './hooks/useProject';
 import { Icon } from './components/Icon';
 import { Modal } from './components/Modal';
 import { RangeControl } from './components/RangeControl';
+import markDark from './assets/mark-dark.png';
+import markLight from './assets/mark-light.png';
 
 const number = (value: number) => value.toLocaleString('fa-IR', { maximumFractionDigits: 2 });
 const SCALE_LABELS: Record<string, string> = { caption: 'زیرنویس', body: 'متن اصلی', h6: 'عنوان ۶', h5: 'عنوان ۵', h4: 'عنوان ۴', h3: 'عنوان ۳', h2: 'عنوان ۲', h1: 'عنوان ۱' };
@@ -89,8 +91,8 @@ export default function App() {
 
   return <div className="app">
     <header className="topbar">
-      <a className="brand" href="#main" aria-label="NoxaPlus Glyph — رفتن به آزمایشگاه"><span className="brand__mark" aria-hidden="true">گ</span><span className="brand__word" dir="ltr"><strong>Noxa<span>Plus</span></strong><span>GLYPH <i> / </i> TYPE LAB</span></span></a>
-      <div className="topbar__center"><span className="status-dot" /> آزمایشگاه تایپوگرافی فارسی <span className="version">۱.۰.۰</span></div>
+      <a className="brand" href="#main" aria-label="NoxaPlus Glyph — رفتن به آزمایشگاه"><span className="brand__logo"><img className="brand__logo-img brand__logo-img--dark" src={markDark} alt="NoxaPlus" /><img className="brand__logo-img brand__logo-img--light" src={markLight} alt="NoxaPlus" /></span><span className="brand__word" dir="ltr"><strong>Noxa<span>Plus</span></strong><span>GLYPH <i> / </i> TYPE LAB</span></span></a>
+      <div className="topbar__center"><span className="status-dot" /> آزمایشگاه تایپوگرافی فارسی <span className="version">۱.۰.۱</span></div>
       <nav className="topbar__actions" aria-label="ابزارهای برنامه">
         <button className="icon-btn" onClick={() => update({ theme: project.theme === 'light' ? 'dark' : 'light' })} aria-label={project.theme === 'light' ? 'حالت تیره' : 'حالت روشن'} title="تغییر ظاهر"><Icon name={project.theme === 'light' ? 'moon' : 'sun'} /></button>
         <button className="icon-btn" onClick={() => setDialog('help')} aria-label="راهنما" title="راهنما"><Icon name="help" /></button>
@@ -126,7 +128,7 @@ export default function App() {
       </section>
       <section className="bottom-note"><Icon name="type" size={28} /><div><h2>بهترین فونت؟ بستگی به متن شما دارد.</h2><p>اینجا امتیاز خوانایی یا انتخاب خودکار وجود ندارد؛ شکل حروف، طول سطر و ریتم را با چشم خود بسنجید.</p></div><button className="btn" onClick={() => { setExportTab('css'); setDialog('export'); }}>طراحی را به کد ببر <Icon name="code" size={17} /></button></section>
     </main>
-    <footer className="footer"><span dir="ltr"><strong>NoxaPlus Glyph</strong> · 1.0.0</span><span>ساختهٔ NoxaPlus · متن‌باز با مجوز MIT</span><a href="https://www.noxaplus.ir" target="_blank" rel="noreferrer">وب‌سایت رسمی <Icon name="arrow" size={14} /></a></footer>
+    <footer className="footer"><span dir="ltr"><strong>NoxaPlus Glyph</strong> · 1.0.1</span><span>ساختهٔ NoxaPlus · متن‌باز با مجوز MIT</span><a href="https://www.noxaplus.ir" target="_blank" rel="noreferrer">وب‌سایت رسمی <Icon name="arrow" size={14} /></a></footer>
     <input className="sr-only" type="file" accept=".json,application/json" ref={fileInput} aria-label="ورود JSON پروژه" onChange={(event) => { const file = event.target.files?.[0]; event.target.value = ''; if (file) void readImport(file); }} />
 
     <Modal feedback={message} open={dialog === 'export'} title="از آزمایشگاه به پروژهٔ شما" subtitle="CSS برای توسعه؛ HTML برای نگهداری، نمایش و چاپ." size="lg" onClose={() => setDialog(null)} footer={<div className="modal__actions"><button className="btn" onClick={() => setDialog(null)}>بستن</button><button className="btn btn--primary" onClick={() => { downloadText(exportTab === 'css' ? css : html, exportFilename(project.title, exportTab), exportTab === 'css' ? 'text/css' : 'text/html'); setMessage('فایل خروجی آمادهٔ دریافت است.'); }}><Icon name="download" /> دانلود {exportTab.toUpperCase()}</button></div>}>

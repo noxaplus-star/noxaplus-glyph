@@ -1,15 +1,22 @@
 {
   "name": "noxaplus-glyph",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "A private, offline Persian typography lab by NoxaPlus. Compare bundled fonts, tune type, build modular scales, and export CSS and printable specimens.",
   "author": "NoxaPlus <NoxaPlus2025@gmail.com>",
   "license": "MIT",
   "homepage": "https://www.noxaplus.ir",
-  "repository": { "type": "git", "url": "git+https://github.com/noxaplus-star/noxaplus-glyph.git" },
-  "bugs": { "url": "https://github.com/noxaplus-star/noxaplus-glyph/issues" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noxaplus-star/noxaplus-glyph.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noxaplus-star/noxaplus-glyph/issues"
+  },
   "type": "module",
-  "engines": { "node": ">=22.12" },
+  "engines": {
+    "node": ">=22.12"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build && node scripts/sync-standalone.mjs",

@@ -1,10 +1,12 @@
+<p align="center"><img src="docs/brand.png" alt="NoxaPlus" width="520"></p>
+
 # NoxaPlus Glyph
 
 **A local-first Persian typography lab: one text, three perspectives.**
 
 NoxaPlus Glyph is a public, open-source browser application by **NoxaPlus**. Compare three embedded variable fonts, tune independent specimens, build a modular type scale, and export your decisions as CSS, a self-contained HTML specimen, or a restorable JSON project. The interface is Persian and right-to-left; this documentation is in English.
 
-**Version:** 1.0.0 · **Release date:** 2026-11-12 · **Application license:** MIT
+**Version:** 1.0.1 · **Release date:** 2026-11-16 · **Application license:** MIT
 
 [Open NoxaPlus Glyph](https://noxaplus-star.github.io/noxaplus-glyph/) · [GitHub repository](https://github.com/noxaplus-star/noxaplus-glyph) · [Official NoxaPlus website](https://www.noxaplus.ir) · [Contact NoxaPlus](mailto:NoxaPlus2025@gmail.com)
 
